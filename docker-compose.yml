@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  streamlit:
+    platform: linux/arm64
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    privileged: true
+    devices:
+      - /dev/video0:/dev/video0
+    group_add:
+      - video
+    ipc: host

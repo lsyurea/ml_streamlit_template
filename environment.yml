@@ -1,0 +1,14 @@
+name: ml_streamlit
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - streamlit
+  - pytorch
+  - torchvision
+  - pillow
+  - opencv
+  - pip:
+    - opencv-python-headless
