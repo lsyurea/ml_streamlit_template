@@ -49,7 +49,8 @@ num_people_placeholder = st.empty()
 webrtc_streamer(
     key="example",
     video_frame_callback=boundingbox_frame_callback,
-    media_stream_constraints={"video": True, "audio": False}
+    media_stream_constraints={"video": True, "audio": False},
+    rtc_configuration=rtc_configuration,
 )
 
 # num_people_placeholder.write(f"Number of people detected: {st.session_state.num_people}")
