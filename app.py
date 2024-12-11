@@ -8,10 +8,11 @@ from streamlit_webrtc import webrtc_streamer
 from PIL import Image
 import av
 
-# from videotransformer import VideoTransformer
-
 
 def boundingbox_frame_callback(frame):
+    '''
+    Create bounding boxes around people in the frame
+    '''
     img = frame.to_ndarray(format="bgr24")
     # Convert frame to PIL image
     image = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))    
@@ -38,19 +39,13 @@ st.title("Track people in a video stream")
 if 'num_people' not in st.session_state:
     st.session_state.num_people = 0
 
-rtc_configuration = {
-    "iceServers": [
-        {"urls": ["stun:stun.l.google.com:19302"]},
-    ]
-}
-
 num_people_placeholder = st.empty()
 
 webrtc_streamer(
     key="example",
     video_frame_callback=boundingbox_frame_callback,
+    rtc_configuration={"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]},
     media_stream_constraints={"video": True, "audio": False},
-    rtc_configuration=rtc_configuration,
 )
 
 # num_people_placeholder.write(f"Number of people detected: {st.session_state.num_people}")
