@@ -1,10 +1,10 @@
-import streamlit as st
-from PIL import Image
-import torch
-import cv2
-import numpy as np
 import time
-import os
+
+import cv2
+import streamlit as st
+import torch
+from PIL import Image
+
 
 # Load YOLOv9 model
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
@@ -15,7 +15,7 @@ cap = cv2.VideoCapture(0)
 time.sleep(2)  # Allow the camera to initialize
 
 if not cap.isOpened():
-    st.error(f"Failed to open camera")
+    st.error("Failed to open camera")
 else:
     # Create placeholders for video and count
     stframe = st.empty()
