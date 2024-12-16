@@ -7,4 +7,4 @@ The command to run directly on local machine is `streamlit run app.py --server.p
 
 Alternatively, you can use `docker compose build` and `docker compose up -d` for local deployment
 
-Note that for hosting, it is likely that the server does not work under a proxy since I am using the TURN server. In that case, please customise it according to the docs based on streamlit_webRTC library.
+Note that for hosting, it is likely that the server does not work under a proxy since I am using the STUN server. In that case, please customise it according to the docs based on streamlit_webRTC library.
