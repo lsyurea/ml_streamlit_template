@@ -65,7 +65,7 @@ streamlit-webrtc==0.47.9
 sympy==1.13.1
 tenacity<9.0.0
 toml==0.10.2
-torch==2.5.1
+torch==2.6.0
 torchvision==0.20.1
 tornado==6.4.2
 tqdm==4.67.1
