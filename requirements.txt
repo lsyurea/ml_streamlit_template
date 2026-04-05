@@ -44,7 +44,7 @@ pyarrow==18.1.0
 pycparser==2.22
 pydeck==0.9.1
 pyee==12.1.1
-Pygments==2.18.0
+Pygments==2.20.0
 pylibsrtp==0.10.0
 pyOpenSSL==26.0.0
 pyparsing==3.2.0
