@@ -46,7 +46,7 @@ pydeck==0.9.1
 pyee==12.1.1
 Pygments==2.18.0
 pylibsrtp==0.10.0
-pyOpenSSL==24.3.0
+pyOpenSSL==26.0.0
 pyparsing==3.2.0
 python-dateutil==2.9.0.post0
 pytz==2024.2
